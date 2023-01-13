@@ -1,0 +1,5 @@
+# general
+.DS_store
+
+# dependencies
+node_modules/
