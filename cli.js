@@ -46,7 +46,6 @@ ${chalk.yellow('For additional help and usage, try ') + chalk.yellow.bold('"star
     
     else if (cliInput === 'go') {
         // do something to star all repos in link pool
-        console.log(chalk.magentaBright.bold('go command recognized'))
 
         const user = process.env.GH_USER
 
@@ -67,7 +66,6 @@ ${chalk.yellow('For additional help and usage, try ') + chalk.yellow.bold('"star
     
     else if (cliInput === 'config') {
         // set an env variable to github user/pw to login
-        console.log(chalk.blue.bold('config command recognized'))
         let user = '';
         let pw = '';
 
@@ -98,14 +96,13 @@ ${chalk.yellow('For additional help and usage, try ') + chalk.yellow.bold('"star
         return
     }
     
-    else if (cliInput === 'auto') {
-        // set how often this script will run, default will be every X days
-        console.log(chalk.green.bold('auto command recognized'))
-        return
-    }
+    // else if (cliInput === 'auto') {
+    //     // set how often this script will run, default will be every X days
+    //     console.log('auto is currently disabled!')
+    //     return
+    // }
 
     else if (cliInput === 'delete') {
-      console.log(chalk.green.bold('delete command recognized'));
 
       const user = process.env.GH_USER
 
@@ -119,7 +116,6 @@ ${chalk.yellow('For additional help and usage, try ') + chalk.yellow.bold('"star
     }
 
     else if (cliInput === 'addrepo') {
-        console.log(chalk.white.bgBlue.bold('addrepo command recognized'))
         const properties = [{ name: 'repo_link' }, { name: 'secret' }];
           
           prompt.start();
@@ -152,7 +148,6 @@ ${chalk.yellow('For additional help and usage, try ') + chalk.yellow.bold('"star
 
     else if (cliInput === 'userinfo') {
       const pwArr = process.env.GH_PW.split('');
-      console.log(chalk.white.bgMagenta.bold('userinfo command recognized'));
       console.log('GH_USERNAME: ' + chalk.white.bold(`${process.env.GH_USER}`));
       console.log('GH_PASSWORD: ' + chalk.white.bold(`${pwArr[0]}_____${pwArr[pwArr.length - 1]}`));
 
